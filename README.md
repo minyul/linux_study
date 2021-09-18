@@ -108,8 +108,32 @@ ls -al | grep kern.log : 현재 디렉토리에서 ls -al 한 결과! 화면에 
 
 cat dpkg.log | grep "2021" ( dpkg.log를 전부 출력해 근데 2021이 있 는것만 출력해 ! )
 
+# 파일 검색
 
+find --help
+이렇게 사용법을 찾을때 대괄호 ( [] ) 가 있을 텐데 이건 ! 생략이 가능하다는 뜻이다!
 
+find 명령어는 현재 디렉토리의 하위 디렉토리까지 전부! 찾는 명령어다 ( 자기자신도 포함 )
+즉슨, root 디렉토리에서 find하면!! 전체 모두! 에서 찾는거겠죵
+
+여러가지 설정파일들이 /etc 밑에 있는 경우가 많다.
+
+find /etc -print 
+find /etc -name "conf" -print  - 이렇게 하면 허가 거부가 뜰 가능성이 있다. !
+이유는 ... : test라는 계정이 권한이 없다는 것임.
+
+find /etc -name "*.conf" -print
+
+. : 현재 디렉토리
+.. : 상위 디렉토리
+
+같은 단계에서 다른 디렉토리로 가려면  $ ../abc : 나의 상위 디렉토리에서의 abc 디렉토리 
+
+find | grep "conf" 
+: find하고 모든 파일들이 나오는데 그러고 나서 grep "conf" 쳐서 conf가 들어간 파일을 찾아라 ! 이뜻임
+
+find | grep "conf" 와 find -name "*.conf" -print 와 는 다르다 
+1번 실행 2번실행
 
 
 
