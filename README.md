@@ -136,6 +136,47 @@ find | grep "conf" 와 find -name "*.conf" -print 와 는 다르다
 1번 실행 2번실행
 
 
+# 압축 관련 커맨드
+
+이 압축 관련 커맨드는 압축을 리눅스에서 어떻게 풀지 - .zip 파일 , .gz 파일, .tar.bz  파일, tar.gz 파일 등
+find > filelist
+
+' > ' : 왼쪽에 나온 명령어를 오른쪽 파일에 넣어라!
+
+하나의 파일을 압축해보자 ! 보통 gzip을 쓴다
+gzip filelist 
+하고 나서 ls 해보면 filelist.gz 이라는 것이 생겼을 것 !
+file filelist.gz 이렇게 해서 정보를 얻을수 있따.
+
+gunzip filelist.gz 
+을 주면 원래의 파일로 돌아온다 ! 즉 압축이 풀어진다. 
+
+리눅스는 원래 확장자라는 의미가 없다 !
+
+
+mv : 파일명을 바꾼다 
+mv filelist.gz test
+파일이름을 바꿧다. test로 ! 
+
+여기서 file test 하면 똑같이 파일정보가 나온다. 즉슨, 확장자가 따로 없다 얘기다 !
+
+tar.gz 같은 경우는 tar로 여러파일들을 묶고 그리고 gz으로 한번 묶는다! 라는 느낌
+
+tar --help
+
+tar -czf test.tar.gz filelist.gz snap/ 사진 
+
+
+mkdir testdir
+cd testdir
+tar -zxf ../test.tar.gz 
+
+
+
+
+
+
+
 
 
 
