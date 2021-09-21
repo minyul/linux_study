@@ -204,6 +204,117 @@ which ls : ls가 어디에있느냐 하면 /usr/bin/ls 가 나옴
 file /user/bin/ls : 이게 무엇인지 나옴
 
 
+# 관리자 권한 실행
+
+리눅스에는 root 라는 관리자 계정이 숨어있다.
+반드시 존재하는 계정이다.
+
+윈도우즈에서도 admin이라고 있다. 리눅스는 똑같이 root 라는 계정이 있다.
+
+/home/{id} : 사용자 계정
+이 사용자계정은 root 계정하고 좀 다르다. ! 권한이 다르다! 
+
+뭔가 할 수 있는 계정과 할수 없는 계정이 이있다.
+
+관리자 계정은 시스템의 모든 설정을 바꿀 수 있다.
+사용자 계정은 이 딱 자기쪽만 바꿀수 있다.
+
+무언가 설치를 한다고 했을 때, 기본적으로는 관리자 계정에서만 할 수 있다.
+
+이제 여기서 sudo 커맨드가 나온다.
+switch user do 라는 의미이다. 내가 실행을 하지만! 다른 계정으로 하는 것처럼 실행한다는 뜻이다.
+이게 보통 사용자 계정이 아닌 관리자 계정으로 무언가를 할때 쓰는 것!!
+
+sudo apt-get install 이런식으로 !
+
+# 패키지 매니저 사용법 (apt, yum)
+
+예를들면 hello를 삭제, 조회, 삭제 등등 
+
+사람 -> Pkg Mg -> Repository 
+
+sudo apt install hello
+
+만약에 지난번에 hello가 과거버전이고 repository에 새로운 버전이있따고 하면!
+sudo apt install hello 하면 다시 삭제하고 다시 install 이된다.
+sudo api rmove hello : 삭제!
+
+apt list : 어마어마하게 많은 패키지들이 나열된다.
+
+apt list | grep hello : hello 가 포함된 패키지를 찾을 수 있음.
+apt list --help 
+man apt 하고 나서 찾아보면돼
+apt list --installed : 설치된 것 확인
+
+
+# 나노(nano) 편집기 사용법
+
+쉘에서의 편집기 기능! 우분투에 nano 라고 있다.
+nano : vim보다는 굉장히 간단
+
+nano
+nano test
+
+
+# 사용자와 그룹
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
